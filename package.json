@@ -1,0 +1,16 @@
+{
+  "name": "ine-price-tracker",
+  "version": "0.2.0",
+  "private": true,
+  "description": "INE mock-store price & stock tracker. Root package holds the storefront probe; the scraper and API live in backend/.",
+  "scripts": {
+    "probe": "node scripts/probe-storefront.mjs",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix backend exec playwright install chromium",
+    "test": "npm --prefix backend test",
+    "typecheck": "npm --prefix backend run typecheck",
+    "scrape:headed": "npm --prefix backend run scrape:headed --"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
